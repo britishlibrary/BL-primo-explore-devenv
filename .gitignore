@@ -1,7 +1,4 @@
-primo-explore/custom/**/css/**
-primo-explore/custom/**/html/**
-primo-explore/custom/**/img/**
-primo-explore/custom/**/js/**
+primo-explore/custom/*/*/*
 primo-explore/tmp/
 
 !primo-explore/custom/.gitignore

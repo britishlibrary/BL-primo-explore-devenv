@@ -1,7 +1,7 @@
-# Add entries to prefixed with '!' to unhide your view files
-# Examples (to un-gitignore a particular HTML file):
-#!IAMS_VU2/html/header.html
-# ... to un-gitignore a useful css file:
-#!IAMS_VU2/css/custom1.css
-# ... to un-gitignore ALL files in 'css' sub-directory
-#!IAMS_VU2/css/**
+*.*
+# Add entries to prefixed with '!' to unhide your view files:
+# Eg:
+# !*/css/**
+# !*/html/**
+# !*/img/**
+# !*/js/**
