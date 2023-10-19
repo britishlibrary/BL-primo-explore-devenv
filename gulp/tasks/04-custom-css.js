@@ -8,24 +8,32 @@ let concat = require("gulp-concat");
 let debug = require('gulp-debug');
 var wrap = require("gulp-wrap");
 var glob = require('glob');
+let browserSyncManager = require('../browserSyncManager');
 
 let buildParams = config.buildParams;
 
 
 
 gulp.task('watch-css', gulp.series('select-view', (cb) => {
-    gulp.watch([buildParams.customCssMainPath(),buildParams.customNpmCssPath(),'!'+buildParams.customCssPath()], {interval: 1000, usePolling: true}, gulp.series('custom-css'));
+    var filesWatchGlob = [buildParams.customCssMainPath(), buildParams.customNpmCssPath()];
+    var excludesFilesGlob = ['!'+buildParams.customCssPath()]
+    gulp.watch(filesWatchGlob.concat(excludesFilesGlob), {interval: 3000, usePolling: true}, gulp.series('custom-css'));
     cb();
-}));
+})); //  
 
 
 
 
 gulp.task('custom-css', gulp.series('select-view', () => {
-
-    return gulp.src([buildParams.customCssMainPath(),buildParams.customNpmCssPath(),'!'+buildParams.customCssPath()])
-        .pipe(concat(buildParams.customCssFile))
-        .pipe(gulp.dest(buildParams.viewCssDir()));
-
+    if (browserSyncManager.getBSyncHandle() === null) {
+        return gulp.src([buildParams.customCssMainPath(),buildParams.customNpmCssPath(),'!'+buildParams.customCssPath()])
+            .pipe(concat(buildParams.customCssFile))
+            .pipe(gulp.dest(buildParams.viewCssDir()));
+    } else {
+        return gulp.src([buildParams.customCssMainPath(),buildParams.customNpmCssPath(),'!'+buildParams.customCssPath()])
+            .pipe(concat(buildParams.customCssFile))
+            .pipe(gulp.dest(buildParams.viewCssDir()))
+            .pipe(browserSyncManager.getBSyncHandle().stream());
+    }
 
 }));
