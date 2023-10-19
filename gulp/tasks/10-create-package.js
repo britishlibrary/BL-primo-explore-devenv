@@ -5,7 +5,7 @@ const prompt = require('prompt');
 const zip = require('gulp-zip');
 const config = require('../config.js');
 
-gulp.task('create-package', gulp.series('select-view', 'custom-js','custom-scss','custom-css', function (cb) {
+gulp.task('create-package', gulp.series('select-view', 'custom-js', 'custom-scss', 'custom-css', 'custom-img', function (cb) {
     const code = config.view();
     console.log('Creating package for : ('+code+'.zip)');
     console.log(code);
