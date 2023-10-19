@@ -1,12 +1,22 @@
 var browserSync = require('browser-sync');
 
+var bsyncHandle = null;
 
 module.exports = {
     closeServer: closeServer,
     reloadServer: reloadServer,
     streamToServer: streamToServer,
     startServer: startServer,
+    getBSyncHandle: getBSyncHandle
 };
+
+function getBSyncHandle() {
+    return bsyncHandle;
+}
+
+function initBSyncHandle(label) {
+    return bsyncHandle = ((label ? browserSync.create(label) : browserSync.create()));
+}
 
 function closeServer(label) {
    browserSync.get(label).exit();
@@ -25,9 +35,9 @@ function startServer(args) {
     var port = args.port;
     var baseDir = args.baseDir;
     var middleware = args.middleware;
-    var open = args.open;
+    var open = args.open || false;  // Callee, '08-servers.js' does not set this to a value so expect it to be undefined
 
-    var server = browserSync.create(label);
+    initBSyncHandle(label);
     var conf = {
         port: port,
         server: {
@@ -38,6 +48,6 @@ function startServer(args) {
     if(middleware) {
         conf.middleware = args.middleware;
     }
-    server.init(conf);
+    bsyncHandle.init(conf);
 
 }
