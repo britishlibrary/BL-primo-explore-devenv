@@ -1,8 +1,15 @@
 *.*
 # Add entries to prefixed with '!' to unhide your view files:
 # Eg:
-# !*/css/**
-# !*/html/**
-# !*/img/**
-# !*/js/**
+#!*/css/**
+#!*/js/**
+#!*/html/**
+#!*/img/**
+!*/css/**
+# The custom reskining files are now Git-visible from the above....BUT...
+# the end-product of the build itself css/custom1.css does not need to be
+# tracked hence the below
+**/css/custom1.css
+**/js/custom.js
+
 

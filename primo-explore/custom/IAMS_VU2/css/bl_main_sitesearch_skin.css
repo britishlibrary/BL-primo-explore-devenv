@@ -1,0 +1,1065 @@
+@import "./header.css";
+@import "./footer.css";
+@import "./modal.css";
+
+
+.sidebar-inner-wrapper {
+	background: #e9e9e9;
+}
+
+
+md-content,
+md-content.md-primoExplore-theme {
+	background: #e9e9e9 !important;
+}
+
+
+/*****************************************************************************/
+/* Global settings                                            				 */
+/*****************************************************************************/
+/* Set fonts */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background: #e9e9e9 url("../img/socam-hero-image-09.jpg") no-repeat center top;
+}
+
+/* Colour of loading animation */
+.diamond {
+	background-color: #046b99 !important;
+}
+
+/* Modify case for all main buttons (doesn't apply to buttons when logged in for requesting etc.) */
+.md-button {
+	text-transform: none;
+}
+
+
+
+/* lots of text and hover boxes to change from aqua to blue*/
+.bar prm-authentication .md-button.link-alt-color,
+.bar prm-authentication .section-title prm-icon.md-button,
+.is-gallery-view prm-gallery-item .collection-element .item-actions .md-button,
+.is-gallery-view prm-gallery-item .collection-element .item-actions button,
+.is-grid-view prm-gallery-item .collection-element .item-actions .md-button,
+.is-grid-view prm-gallery-item .collection-element .item-actions button,
+.md-button.button-as-link.link-alt-color,
+.section-title .bar prm-authentication prm-icon.md-button,
+.section-title prm-icon.md-button.button-as-link,
+prm-gallery-collection .collection-folder .item-actions .md-button,
+prm-gallery-collection .collection-folder .item-actions button {
+	color: #046b99;
+}
+
+.bar prm-authentication .md-button.link-alt-color._md-focused:not([disabled]),
+.bar prm-authentication .md-button.link-alt-color.hovered:not([disabled]),
+.bar prm-authentication .md-button.link-alt-color.md-focused:not([disabled]),
+.bar prm-authentication .md-button.link-alt-color:focus:not([disabled]),
+.bar prm-authentication .md-button.link-alt-color:hover:not([disabled]),
+.bar prm-authentication .section-title prm-icon.md-button._md-focused:not([disabled]),
+.bar prm-authentication .section-title prm-icon.md-button.hovered:not([disabled]),
+.bar prm-authentication .section-title prm-icon.md-button.md-focused:not([disabled]),
+.bar prm-authentication .section-title prm-icon.md-button:focus:not([disabled]),
+.bar prm-authentication .section-title prm-icon.md-button:hover:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions ._md-focused.md-button:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions .hovered.md-button:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions .md-button:focus:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions .md-button:hover:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions .md-focused.md-button:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions button._md-focused:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions button.hovered:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions button.md-focused:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions button:focus:not([disabled]),
+.is-gallery-view prm-gallery-item .collection-element .item-actions button:hover:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions ._md-focused.md-button:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions .hovered.md-button:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions .md-button:focus:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions .md-button:hover:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions .md-focused.md-button:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions button._md-focused:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions button.hovered:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions button.md-focused:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions button:focus:not([disabled]),
+.is-grid-view prm-gallery-item .collection-element .item-actions button:hover:not([disabled]),
+.md-button.button-as-link.link-alt-color._md-focused:not([disabled]),
+.md-button.button-as-link.link-alt-color.hovered:not([disabled]),
+.md-button.button-as-link.link-alt-color.md-focused:not([disabled]),
+.md-button.button-as-link.link-alt-color:focus:not([disabled]),
+.md-button.button-as-link.link-alt-color:hover:not([disabled]),
+.section-title .bar prm-authentication prm-icon.md-button._md-focused:not([disabled]),
+.section-title .bar prm-authentication prm-icon.md-button.hovered:not([disabled]),
+.section-title .bar prm-authentication prm-icon.md-button.md-focused:not([disabled]),
+.section-title .bar prm-authentication prm-icon.md-button:focus:not([disabled]),
+.section-title .bar prm-authentication prm-icon.md-button:hover:not([disabled]),
+.section-title prm-icon.md-button.button-as-link._md-focused:not([disabled]),
+.section-title prm-icon.md-button.button-as-link.hovered:not([disabled]),
+.section-title prm-icon.md-button.button-as-link.md-focused:not([disabled]),
+.section-title prm-icon.md-button.button-as-link:focus:not([disabled]),
+.section-title prm-icon.md-button.button-as-link:hover:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions ._md-focused.md-button:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions .hovered.md-button:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions .md-button:focus:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions .md-button:hover:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions .md-focused.md-button:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions button._md-focused:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions button.hovered:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions button.md-focused:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions button:focus:not([disabled]),
+prm-gallery-collection .collection-folder .item-actions button:hover:not([disabled]) {
+	color: #fff;
+	background-color: #046b99;
+}
+
+/*****************************************************************************/
+/* Top nav bar   				                           					 */
+/*****************************************************************************/
+/* The very top of the page is tha BL standard header, loaded via AngularJS on BL_prmTopbarBefore*/
+/* There is a BL logo on that top banner so we hide the logo provided through the Primo back office */
+
+/* hide the usual logo */
+prm-topbar #banner {
+	display: none;
+}
+
+
+/*Overriding some styles on the BL standard header */
+
+#header-scrape .header__util {
+	height: 61px;
+}
+
+#header-scrape .beta-logo {
+	background: url("../img/beta-beige-71x40.jpg") no-repeat;
+	width: 71px !important;
+	height: 40px !important;
+	background-size: 71px 40px;
+	image-rendering: -webkit-optimize-contrast;
+	margin-left: 15px;
+}
+
+
+/* We've added a logo saying 'beta service' to the standard BL header
+/* the background is beige. text is red */
+
+.beta-service-link a {
+	background: #f0e6da;
+	color: #e24b54 !important;
+	display: block;
+	font-size: 1.2em;
+	width: 65px;
+	height: 40px;
+	text-align: center;
+	padding: 6px 0;
+	margin-left: 14px;
+	border-block: none;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.beta-service-link a:hover {
+	box-shadow: none;
+}
+
+.beta-right {
+	margin-left: 40px;
+}
+
+
+/*Hide some parts of the BL standard header*/
+.search-container {
+	display: none
+}
+
+.nav-secondary {
+	display: none
+}
+
+/*hide login mobile*/
+#header-scrape .login-mobile {
+	display: none;
+}
+
+
+
+/*****************/
+/* Top nav bar   */
+/*****************/
+
+/*This makes the nav bar sit in the middle of the page, aligned with under the header*/
+.top-nav-bar {
+	max-width: 976px;
+	margin: 0 auto;
+}
+
+/*This spacer on the left of the bar doesn't have a style so we have to select it using its place as first flex-50 inside the topbar*/
+/*Make it smaller to move the 'Home' link to the left*/
+.top-nav-bar :nth-child(1 of .flex-50) {
+	max-width: 45px
+}
+
+
+.prm-secondary-color,
+prm-search-bookmark-filter .md-button,
+prm-topbar .top-nav-bar {
+	background: #1c304a;
+}
+
+
+/*reduce the height of the space so that it fits in the secondary nav of the standard header */
+prm-user-area-expandable {
+	height: 40px;
+}
+
+/*Login button */
+/* Change it to white with blue text & hover */
+prm-topbar .md-button:not(.disable-hover) {
+	color: #ffffff !important;
+	background-color: #1c304a;
+	font-weight: 400 !important;
+	line-height: 1.5;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem !important;
+	white-space: nowrap;
+	height: 40px;
+	max-width: 14em;
+	/*    border: thin solid #046b99;*/
+}
+
+prm-topbar .md-button:hover {
+	background-color: #046b99 !important;
+	color: #fff !important;
+	height: 40px;
+	/*	box-shadow: 0 0 3px #046b99, 0 0 6px #fff, 0 0 9px #046b99;*/
+}
+
+
+top-nav-bar-links .md-button:not(.disable-hover) {
+	color: #ffffff !important;
+	background-color: #1c304a;
+	font-weight: 400 !important;
+	line-height: 1.5;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem !important;
+	white-space: nowrap;
+	height: 40px;
+	/*    border: thin solid #046b99;*/
+}
+
+top-nav-bar-links .md-button:hover {
+	background-color: #046b99 !important;
+	color: #fff !important;
+	white-space: nowrap;
+	height: 40px;
+	/*	box-shadow: 0 0 3px #046b99, 0 0 6px #fff, 0 0 9px #046b99;*/
+}
+
+top-nav-bar-links .md-button:focus {
+	background-color: #046b99 !important;
+	color: #fff !important;
+	white-space: nowrap;
+	height: 40px;
+	/*	box-shadow: 0 0 3px #046b99, 0 0 6px #fff, 0 0 9px #046b99;*/
+}
+
+/*style for the menu buttons?*/
+top-nav-bar-links .hoverable-over-dark:not(.disable-hover) {
+	color: #ffffff !important;
+	background-color: #1c304a;
+	font-weight: 400 !important;
+	line-height: 1.5;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem !important;
+	white-space: nowrap;
+	height: 40px;
+}
+
+
+/*working on this - removed .layout-full-height, from the style below*/
+prm-main-menu[menu-type=menu],
+prm-main-menu[menu-type=menu] .top-nav-bar-links,
+prm-topbar .md-button:not(.md-icon-button),
+prm-topbar .top-nav-bar,
+prm-user-area,
+prm-user-area ._md-fab-toolbar-content,
+prm-user-area ._md-fab-toolbar-wrapper,
+prm-user-area .md-fab-action-item,
+prm-user-area .md-fab-toolbar-content,
+prm-user-area .md-fab-toolbar-wrapper,
+prm-user-area .md-toolbar-tools,
+prm-user-area md-fab-toolbar,
+prm-user-area md-fab-trigger,
+prm-user-area md-toolbar,
+prm-user-area prm-authentication {
+	height: 40px;
+	min-height: 20px;
+}
+
+
+/*menu in mobile mode*/
+.layout-full-height {
+	height: 100%
+}
+
+prm-main-menu[menu-type=full] .md-button,
+prm-main-menu[menu-type=full] .md-button .md-headline,
+prm-main-menu[menu-type=full] .overlay-menu-item .md-headline {
+	font-weight: 400;
+	font-size: 1em;
+	color: #000;
+}
+
+/* Hides the Languages button in mobile view menu */
+prm-main-menu[menu-type=full] .overlay-menu-item {
+	display: none !important;
+}
+
+
+/* Pin next to login */
+prm-search-bookmark-filter {
+	height: 40px;
+}
+
+prm-topbar prm-search-bookmark-filter a {
+	color: #ffffff !important;
+	background-color: #1c304a;
+}
+
+/* Moves the Settings header down to show all topbar */
+body>primo-explore>div>prm-account>div {
+	padding-bottom: 142px;
+}
+
+/* Resizes Personal Details box to show all content */
+#personalDetails {
+	min-width: 500px;
+	/* set a minimum width */
+	min-height: 275px
+}
+
+@media (max-width: 768px) {
+	#personalDetails {
+		min-width: unset;
+		/* remove the minimum width on smaller screens */
+	}
+}
+
+/* Hides Language selection in Personal Details section */
+body>primo-explore>div>prm-account>md-content>div.main.layout-row.flex>prm-personal-info>div.layout-row.layout-align-start-start>div.width-100.flex-xl-25.flex-md-30,
+body>primo-explore>div>prm-account>md-content>div.main.layout-row.flex>prm-personal-info>div.layout-align-start-start.layout-column>div.width-100.flex-xl-25.flex-md-30 {
+	display: none;
+}
+
+/* Hides the Library Card button in user menu */
+.my-library-card-ctm {
+	display: none;
+}
+
+/* Hides the Languages button in user menu */
+.my-languages-ctm {
+	display: none;
+}
+
+/*Hides the  RefWorks button in user menu */
+.my-refworks-ctm {
+	display: none;
+}
+
+.my-refworks-separator-ctm {
+	display: none;
+}
+
+prm-library-card-menu {
+	display: none;
+}
+
+
+/* Remove the QR code button from topbar */
+#qrCodeScanner {
+	display: none;
+}
+
+/* Selector for sub-headings in topbar 'show more' section */
+.md-subhead {
+	display: none;
+}
+
+
+/*****************************************************************************/
+/* Search boxes                                           					 */
+/*****************************************************************************/
+
+.prm-primary-bg.prm-hue1,
+prm-atoz-search-bar.prm-hue1,
+prm-browse-search-bar.prm-hue1,
+prm-collection-gallery-header .prm-hue1.collection-header-inner,
+prm-newspapers-search-bar.prm-hue1,
+prm-search-bar.prm-hue1,
+prm-spinner.prm-hue1.overlay-cover.light-on-dark:after,
+prm-tags-search-bar.prm-hue1,
+prm-tree-nav prm-spinner .prm-hue1.diamond {
+	background-color: #0D5257;
+}
+
+/* Increase search box banner from 1.5 general padding, to 3em padding under and above main search box  
+SAM - reduced top padding from prm-search-bar as it interfered with the login button. Using margin instead.
+
+prm-atoz-search-bar, prm-browse-search-bar, prm-newspapers-search-bar, prm-search-bar, prm-tags-search-bar {
+    padding-bottom: 3em; padding-top: 3em;
+}
+
+*/
+
+prm-atoz-search-bar,
+prm-browse-search-bar,
+prm-newspapers-search-bar,
+prm-search-bar,
+prm-tags-search-bar {
+	padding-bottom: 3em;
+	padding-top: 3em;
+}
+
+prm-search-bar {
+	/*width: 976px;*/
+	padding-bottom: 3em;
+	padding-top: 1em;
+	/*margin: 200px auto 60px;*/
+	margin: 200px 0 60px;
+	background: transparent !important;
+	/*height: 250px;*/
+}
+
+@media (max-width: 992px) {
+	prm-search-bar {
+		margin: 120px 0 0;
+	}
+}
+
+
+/* Change the search icon's colour 
+prm-search-bar .simple-search-wrapper .search-actions .md-button {
+	color:#fff;
+	background:#CF0303;
+}
+*/
+/* Change the background colour of the search icon on hover, currently black with 0.5 transparency 
+prm-search-bar .simple-search-wrapper .search-actions .md-button:hover {
+	background-color:rgba(0, 0, 0, 0.5);
+}
+*/
+
+/*search buttons on advanced search 
+.md-button.button-confirm:hover:not([disabled]) {
+	color:#fff;
+	background:#CF0303 !important;
+}
+*/
+.md-button.button-confirm {
+	color: #fff;
+	background: #CF0303 !important;
+}
+
+.md-button.button-confirm:hover {
+	color: #CF0303 !important;
+	background: #e9e9e9 !important;
+	/*background-color:rgba(0, 0, 0, 0.5);*/
+}
+
+
+/* Enlarge Advanced search button, add border and glow on hover */
+.md-button.switch-to-advanced {
+	font-size: 120%;
+	border: thin solid #046b99;
+}
+
+.md-button.switch-to-advanced:hover {
+	background-color: #046b99 !important;
+	color: #fff !important;
+	/*box-shadow: 0 0 3px #046b99, 0 0 6px #fff, 0 0 9px #046b99;*/
+}
+
+/* Enlarge Simple search button, add border and glow on hover */
+.md-button.switch-to-simple {
+	font-size: 120%;
+	border: thin solid #046b99;
+}
+
+.md-button.switch-to-simple:hover {
+	color: #fff !important;
+	background-color: #046b99 !important;
+	/*	box-shadow: 0 0 3px #046b99, 0 0 6px #fff, 0 0 9px #046b99;*/
+}
+
+/* Background colour to Advanced Search button white background with black text */
+prm-search-bar .search-switch-buttons .md-button.switch-to-advanced {
+	color: #046b99;
+	background-color: #ffffff;
+	border: thin solid #046b99;
+}
+
+/* Colour and background of Simple search when on Advanced; white background with black text */
+prm-search-bar .search-switch-buttons .md-button.switch-to-simple {
+	color: #046b99;
+	background-color: #ffffff;
+	border: thin solid #046b99;
+}
+
+/*Selector for Advanced search input boxes, setting background */
+.advanced-search-wrapper .inputs-row>md-input-container:last-child,
+prm-search-bar .advanced-search-wrapper .inputs-row>md-input-container:last-child,
+prm-tags-search-bar .advanced-search-wrapper .inputs-row>md-input-container:last-child {
+	background: #1c304a) none repeat scroll 0 0 !important;
+}
+
+@media (max-width: 992px) {
+	primo-user-area {
+		display: none;
+	}
+}
+
+/* Background of main search bar */
+/*
+.prm-primary-bg, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-gallery-header .collection-header-inner, prm-newspapers-search-bar, prm-search-bar, prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar {
+	background: #e9e9e9 url("../img/socam-hero-image-09-lower.jpg") no-repeat center top;
+}
+*/
+/* Background to Advanced Search */
+/*prm-search-bar .advanced-search-backdrop {
+	background: #e9e9e9 url("../img/socam-hero-image-09-lower.jpg") no-repeat center top;
+}
+*/
+
+/*****************************************************************************/
+/* Home page                                             					 */
+/*****************************************************************************/
+
+/* QuickChat icon */
+.quick-chat-icon {
+	margin: auto;
+	width: 238px;
+	height: 86px;
+}
+
+.column1 {
+	flex: 65;
+	layout: column;
+}
+
+.column2 {
+	flex: 35;
+	layout: column;
+}
+
+
+.bl-catrow {
+	width: 100%;
+	display: inline-flex;
+}
+
+.bl-catimagebox {
+	width: 100px;
+	padding-right: 16px;
+}
+
+.bl-catimage {
+	width: 96px;
+	height: 54px;
+	background-size: 96px 54px;
+	image-rendering: -webkit-optimize-contrast;
+	display: block;
+}
+
+.bl-cattxtbox {
+	width: 100%;
+}
+
+.bl-cattitle {
+	color: #000;
+}
+
+.bl-catdesc {
+	color: #000;
+}
+
+
+.bl-explore-advert {
+	content: url("../img/gates-at-the-british-library-st-pancras-building.jpg");
+}
+
+.bl-digiman-advert {
+	content: url("../img/illustration-from-the-ten-birth-tales-or-the-last-ten-jatakas.jpg");
+}
+
+.bl-illman-advert {
+	content: url("../img/detail-of-a-miniature-of-the-author-writing-his-book-roman-de-la-rose-f133.jpg");
+}
+
+
+
+
+
+
+
+/*********************************************************************/
+/*  BRIEF RESULTS PAGE                                               */
+/*********************************************************************/
+
+/* record title */
+prm-brief-result .item-title span {
+	color: #1c304a;
+}
+
+/*****************************************************************************/
+/* Facets				                                                     */
+/*****************************************************************************/
+
+/* Give background colour to facet titles */
+.section-title.md-button.md-primoExplore-theme.md-ink-ripple.layout-fill {
+	/* background: #1c304a  - the dark one */
+	/* background: #046b99  - the lighter one */
+	background: #046b99
+}
+
+prm-facet-exact .section-title:focus,
+prm-facet-exact .section-title:hover,
+prm-facet-exact .section-title:active {
+	color: #046b99 !important;
+}
+
+
+/* Change the colour of the chevrons on the facet headers */
+prm-facet-exact .section-title prm-icon {
+	color: #fff;
+}
+
+/* Change section header titles to white text */
+.section-title-header,
+.sidebar-header {
+	color: #ffffff;
+}
+
+.section-title-header:hover,
+.sidebar-header:hover,
+.sidebar-header:active {
+	color: #046b99 !important;
+}
+
+/* Sort by text changed to white with section title, changing back to black as it has no background */
+h3.section-title-header {
+	color: #000;
+}
+
+/*Give date input boxes a background colour */
+.ng-valid-min,
+.ng-valid-max {
+	background: rgb(28, 48, 74, 0.1) none repeat scroll 0 0 !important;
+}
+
+/* Add to facets to make text larger */
+.section-content .md-chips .md-chip.wrapping-chip {
+	font-size: 120%;
+}
+
+
+/*****************************************************************************/
+/* Full record                                                    			 */
+/*****************************************************************************/
+
+/* Hide Tags section from full record – pane and left menu */
+div#tags {
+	display: none;
+}
+
+[aria-label="Tags"] {
+	display: none;
+}
+
+/* Remove BibTex and E-Mail from Send To options */
+#BibTeXPushTo {
+	display: none;
+}
+
+#E-mail {
+	display: none;
+}
+
+/*RE-order the Center Sections */
+#full-view-container>*:first-child {
+	display: flex;
+	flex-direction: column;
+}
+
+#details {
+	order: 1;
+	margin-top: -2em;
+}
+
+#links {
+	order: 2;
+}
+
+#getit_link1_0 {
+	order: 3;
+}
+
+#getit_link1_1 {
+	order: 4;
+	margin-bottom: -2em;
+}
+
+#getit_link2 {
+	order: 5;
+}
+
+#action_list {
+	order: 6;
+}
+
+/*re-order the Left Navigation on the Detailed Page */
+[aria-label="Details"] {
+	order: 1 !important;
+}
+
+[aria-label="Links"] {
+	order: 2 !important;
+}
+
+[aria-label="Online access"] {
+	order: 3 !important;
+}
+
+[aria-label="Physical item"] {
+	order: 4 !important;
+}
+
+[aria-label="No orderable item"] {
+	order: 4 !important;
+}
+
+[aria-label="I want this"] {
+	order: 5 !important;
+}
+
+[aria-label="Send to"] {
+	order: 6 !important;
+}
+
+/*prm-opac { display: none}*/
+prm-requests-services-ovl {
+	display: none
+}
+
+/*prm-view-online { display: none}*/
+
+.bl-tab1-content {
+	font-size: 15px;
+}
+
+/*****************************************************************************/
+/* Settings page				                                                     */
+/*****************************************************************************/
+
+
+
+/*****************************************************************************/
+/* Footer				                                                     */
+/*****************************************************************************/
+
+/* Footer box and link colour */
+.grid_61 {
+	width: 100%
+}
+
+.new-footer #page-footer {
+	background-color: #131313;
+	float: left;
+	width: 100%
+}
+
+.new-footer #page-footer,
+.new-footer #page-footer a {
+	color: #a09c9d
+}
+
+.new-footer #page-footer .footer-block-inner {
+	display: block;
+	min-height: 100px
+}
+
+.new-footer #page-footer .footer-block-inner .menu-block ul li a {
+	border-left: 1px solid #4e4e4e;
+	display: inline-block;
+	font-size: 12px;
+	font-size: .8rem;
+	margin-top: 0;
+	padding: 0 25px
+}
+
+.new-footer #page-footer .footer-block-inner .menu-block ul li.desktop a,
+.new-footer #page-footer .footer-block-inner .menu-block ul li.mobile a,
+.new-footer #page-footer .footer-block-inner .menu-block ul li.noleftborder a {
+	border-left: 0 none;
+	padding-left: 0
+}
+
+.h-menu {
+	overflow: hidden
+}
+
+.h-menu li {
+	float: left
+}
+
+.footer-block .text-block p:last-of-type {
+	padding-left: 16px;
+	text-align: center;
+}
+
+.footer-block-inner,
+.main-content-block-inner {
+	position: relative;
+	float: none;
+	display: block;
+	margin: 0 auto
+}
+
+/* This takes away the bullet points in bottom list */
+footer .menu-block ul.h-menu {
+	padding-top: 1rem;
+	display: grid;
+	justify-content: center;
+	grid-auto-flow: column;
+	list-style: none;
+}
+
+/*****************************************************************************/
+/* Availability section                                                      */
+/*****************************************************************************/
+
+
+/* change the colour of the Online Access link to black */
+/*.not_restricted {
+    color: #000;
+}
+*/
+
+/* message specific to records without an orderable item*/
+/* These links shouldn't actually exist any more */
+/* giving it a display none to fix a problem in the normalisation */
+.bl-no-item {
+	color: #000000 !important;
+	position: relative;
+	z-index: 100;
+	display: none
+}
+
+
+/* Browse this collection link*/
+.bl-browse-hierarchy {
+	color: #1c304a !important;
+}
+
+.bl-browse-hierarchy a:hover {
+	border-bottom-width: 0px !important;
+	color: #1c304a !important
+}
+
+/* hierarchy icon */
+.avail-img {
+	max-width: 17px;
+	vertical-align: bottom;
+	position: relative;
+	margin: 0 0px;
+	z-index: 100;
+}
+
+.not_restricted,
+[class*=check_] {
+	color: #1c304a !important;
+}
+
+/*****************************************************************************/
+/* Title bar  -  appears below the logo+menus bar. Used in prm-topbar-after  */
+/*****************************************************************************/
+/* !!! The title bar element is currently completely hidden, so most of this section is moot */
+
+
+/* Explore Archives and Manuscripts text*/
+.horizontal-bg-container-identity h2 {
+	font-size: 1.625rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #fff;
+}
+
+h2.identity-text-main {
+	font-size: 1.625rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #fff;
+}
+
+@media (max-width: 450px) {
+	h2.identity-text-main {
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.5;
+		color: #fff;
+	}
+}
+
+.bl-top-row {
+	position: relative;
+	margin: 0 auto;
+}
+
+.bl-title.container {
+	position: relative;
+	margin: 0 auto;
+}
+
+.bl-title.container.container-header {
+	padding: 0;
+}
+
+.bl-title.container.container-identity {
+	padding: 0;
+}
+
+.bl-title.container {
+	position: relative;
+	margin: 0 auto;
+}
+
+.bl-title.container.container-header,
+.bl-title.container.container-identity {
+	padding: 0;
+	border-top: 2px solid white;
+}
+
+.bl-title.container.main-nav-container-inner {
+	overflow-y: visible;
+}
+
+.bl-title.identity {
+	padding: 2px 0px 1px;
+	margin-left: 1em;
+}
+
+/*This is the main style for the bar with the title*/
+.horizontal-bg-container-identity {
+	background-color: #046b99;
+	height: 50px;
+}
+
+@media (max-width: 450px) {
+	.horizontal-bg-container-identity {
+		background-color: #046b99;
+		height: 30px;
+	}
+}
+
+/* We don't have a link at the moment, but if we do...*/
+h2.bl-title.identity-text-main a {
+	color: #333;
+	font-weight: lighter;
+}
+
+h2.bl-title.identity-text-main a:hover {
+	background: transparent;
+	box-shadow: none;
+}
+
+h2.identity-text-main a {
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+}
+
+/*****************************************************************************/
+/* Footer				                                                     */
+/*****************************************************************************/
+
+.footer-column {
+	flex: 100;
+	layout: column;
+	color: #a09c9d;
+	background-color: #131313;
+	float: left;
+	width: 100%
+}
+
+.footer-column a {
+	color: #a09c9d
+}
+
+
+/* Footer box and link colour */
+
+
+.grid_61 {
+	width: 100%
+}
+
+.new-footer #page-footer {
+	background-color: #131313;
+	float: left;
+	width: 100%
+}
+
+.new-footer #page-footer,
+.new-footer #page-footer a {
+	color: #a09c9d
+}
+
+.new-footer #page-footer .footer-block-inner {
+	display: block;
+	min-height: 100px
+}
+
+.new-footer #page-footer .footer-block-inner .menu-block ul li a {
+	border-left: 1px solid #4e4e4e;
+	display: inline-block;
+	font-size: 12px;
+	font-size: .8rem;
+	margin-top: 0;
+	padding: 0 25px
+}
+
+.new-footer #page-footer .footer-block-inner .menu-block ul li.desktop a,
+.new-footer #page-footer .footer-block-inner .menu-block ul li.mobile a,
+.new-footer #page-footer .footer-block-inner .menu-block ul li.noleftborder a {
+	border-left: 0 none;
+	padding-left: 0
+}
+
+.h-menu {
+	overflow: hidden
+}
+
+.h-menu li {
+	float: left
+}
+
+.footer-block .text-block p:last-of-type {
+	padding-left: 16px;
+	text-align: center;
+}
+
+.footer-block-inner,
+.main-content-block-inner {
+	position: relative;
+	float: none;
+	display: block;
+	margin: 0 auto
+}
+
+/* This takes away the bullet points in bottom list */
+
+footer .menu-block ul.h-menu {
+	padding-top: 1rem;
+	display: grid;
+	justify-content: center;
+	grid-auto-flow: column;
+	list-style: none;
+}
